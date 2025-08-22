@@ -1,0 +1,12 @@
+departamento = input("Digite o departamento: ").lower()
+
+if departamento == "desenvolvimento de software":
+    print("Recomendação: Laptop com alto desempenho")
+elif departamento == "marketing":
+    print("Recomendação: Tablet para mobilidade e apresentações")
+elif departamento == "recursos humanos":
+    print("Recomendação: Computador desktop estável e custo-benefício")
+elif departamento == "p&d" or departamento == "pesquisa e desenvolvimento":
+    print("Recomendação: Equipamentos com especificações de última geração")
+else:
+    print("Departamento não identificado. Não há recomendação específica.")

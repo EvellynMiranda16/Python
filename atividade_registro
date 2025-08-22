@@ -1,0 +1,34 @@
+usuarios = {}  # Dicionário para armazenar usuários e senhas
+
+while True:
+    print("\n=== Sistema de Controle de Acesso ===")
+    print("1 - Registrar")
+    print("2 - Login")
+    print("3 - Sair")
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        print("\n--- Registro de Usuário ---")
+        usuario = input("Digite o nome de usuário: ")
+        if usuario in usuarios:
+            print("Usuário já existe! Tente outro.")
+        else:
+            senha = input("Digite a senha: ")
+            usuarios[usuario] = senha
+            print(" Registro realizado com sucesso!")
+
+    elif opcao == "2":
+        print("\n--- Login ---")
+        usuario = input("Usuário: ")
+        senha = input("Senha: ")
+        if usuario in usuarios and usuarios[usuario] == senha:
+            print(f" Bem-vindo(a), {usuario}! Acesso liberado.")
+        else:
+            print(" Usuário ou senha incorretos.")
+
+    elif opcao == "3":
+        print("Encerrando o sistema... ")
+        break
+
+    else:
+        print("Opção inválida! Tente novamente.")

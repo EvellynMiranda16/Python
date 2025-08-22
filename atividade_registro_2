@@ -1,0 +1,9 @@
+distancia = int(input())   # Distância percorrida em Km
+combustivel = float(input())  # Combustível gasto em litros
+
+# Cálculo do consumo médio
+consumo_medio = distancia / combustivel
+
+# Saída formatada com 3 casas decimais
+print(f"{consumo_medio:.3f} km/l")
+
